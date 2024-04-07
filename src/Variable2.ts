@@ -7,4 +7,12 @@ console.log(Balance.toFixed(1));
 let givenuserId: boolean = true;
 console.log(givenuserId.valueOf());
 
+let xx;
+function getHero() {
+  return "hero";
+}
+
+xx = getHero();
+console.log(xx);
+
 export {};
