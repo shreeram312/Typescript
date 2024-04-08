@@ -63,4 +63,10 @@ console.log(
   ])
 );
 
+function DCdata({ name, email }: { name: string; email?: string }): {} {
+  return { name: "shreeram", email: "shreeram@gmail.com " };
+}
+
+console.log(DCdata({ name: "Teja", email: "tej@gmai.com" }));
+
 export {};
