@@ -6,10 +6,15 @@ interface User {
   getcoupon(cname: string, cid: number): string;
 }
 
+interface User {
+  magicnumber: number;
+}
+
 const Shreeram: User = {
   dbbId: 777,
   email: "ram@gamil.com",
   userId: 1111,
+  magicnumber: 44,
   StartTrial: () => {
     return "uydgyus";
   },
@@ -20,5 +25,6 @@ const Shreeram: User = {
 
 console.log((Shreeram.email = "shreeram@gmail.com"));
 console.log(Shreeram.StartTrial());
+console.log(Shreeram.magicnumber);
 
 export {};
