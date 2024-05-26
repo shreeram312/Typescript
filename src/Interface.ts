@@ -7,14 +7,20 @@ interface User {
 }
 
 interface User {
-  magicnumber: number;
+  magicnumber?: number;
 }
 
-const Shreeram: User = {
+interface Admin extends User {
+  role: "admin" | "ta";
+}
+
+const Shreeram: Admin = {
   dbbId: 777,
+  role: "admin",
+
   email: "ram@gamil.com",
   userId: 1111,
-  magicnumber: 44,
+
   StartTrial: () => {
     return "uydgyus";
   },
@@ -26,5 +32,5 @@ const Shreeram: User = {
 console.log((Shreeram.email = "shreeram@gmail.com"));
 console.log(Shreeram.StartTrial());
 console.log(Shreeram.magicnumber);
-
+console.log(Shreeram.role);
 export {};
