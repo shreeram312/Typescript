@@ -1,4 +1,4 @@
-const users = new Map();
+const users = new Map<string, { name: string; age: number }>();
 
 users.set("abc@123", { name: "shree", age: 22 });
 users.set("abc@123", { name: "shree", age: 555 });
