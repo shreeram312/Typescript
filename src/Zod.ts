@@ -13,10 +13,12 @@ const Profile = z.object({
     .optional(),
 });
 
+type finalUserSchema = z.infer<typeof Profile>;
+
 app.put("/users", (req, res) => {
   const { name, email, age } = req.body;
   const { success } = Profile.safeParse({ name, email, age });
-  const updatedBody = req.body;
+  const updatedBody: finalUserSchema = req.body;
 
   if (!success) {
     return res.json({
@@ -27,8 +29,6 @@ app.put("/users", (req, res) => {
   return res.json({
     msg: updatedBody,
   });
-
-  return res.json({});
 });
 
 app.listen(3000);
