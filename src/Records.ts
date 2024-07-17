@@ -16,7 +16,7 @@ const users: UserAge = {
   },
 };
 
-console.log((users["abc@123"]["name"] = "shreerammmmm"));
+console.log((users["abc@123"]["name"] = "shreerammmmmmmmmmmmmmmmmmmmmmmmmm"));
 
 console.log(users);
 export {};
